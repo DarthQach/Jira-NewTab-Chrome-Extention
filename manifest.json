@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "JIRA Open New Tab",
+  "description": "A Chrome extension that opens all links clicked inside JIRA in a new tab.",
+  "version": "1.0",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "assets/icon.png",
+      "48": "assets/icon.png",
+      "128": "assets/icon.png"
+    },
+    "default_title": "Open Links in New Tab"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://jira-pslgroup.atlassian.net/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
+
+
+
